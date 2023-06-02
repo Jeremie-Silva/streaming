@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Just Stream It</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://user.oc-static.com/upload/2020/09/18/16004298163529_P5.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/about">Catégories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+<div class="carousel-container">
+  <button class="prev-button">&lt;</button>
+  <div class="carousel">
+    <div class="carousel-item">1</div>
+    <div class="carousel-item">2</div>
+    <div class="carousel-item">3</div>
+    <div class="carousel-item">4</div>
+    <div class="carousel-item">5</div>
+    <div class="carousel-item">6</div>
+    <div class="carousel-item">7</div>
+  </div>
+  <button class="next-button">&gt;</button>
+</div>
+
+        </div>
+    </main>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carouselContainer = document.querySelector('.carousel-container');
+  const carousel = document.querySelector('.carousel');
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+
+  let currentIndex = 0;
+
+  prevButton.addEventListener('click', function() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      carousel.style.transform = `translateX(-${currentIndex * 100}px)`;
+    }
+  });
+
+  nextButton.addEventListener('click', function() {
+    if (currentIndex < 3) {
+      currentIndex++;
+      carousel.style.transform = `translateX(-${currentIndex * 100}px)`;
+    }
+  });
+});
+
+</script>
+</body>
+</html>
