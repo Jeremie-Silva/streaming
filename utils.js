@@ -88,18 +88,54 @@ async function getMovieList(endpoint, theme) {
 //Insert data utils
 
 function createItem(product) {
-    const container = document.getElementById("best_movie");
+    const container_img = document.getElementById("best_movie_img");
+    const container_data = document.getElementById("best_movie_data");
     
     const link = document.createElement('a');
     const img = document.createElement('img');
-
     link.classList.add('link-plain');
     img.classList.add('best-movie');
     img.src = product.image_url;
-    img.alt = product.title;
-
     link.appendChild(img);
-    container.appendChild(link);
+    img.alt = product.title;
+    container_img.appendChild(link);
+    
+    const title = document.createElement('h1');
+    title.textContent = product.title;
+
+    const bouton = document.createElement('bouton');
+    bouton.textContent = product.title;
+    
+    const directors = document.createElement('p');
+    directors.textContent = "Directors : " + product.directors;
+    
+    const year = document.createElement('p');
+    year.textContent = "Year : " + product.year;
+
+    const score = document.createElement('p');
+    score.textContent = "Score : " + product.imdb_score;
+    
+    const votes = document.createElement('p');
+    votes.textContent = "Votes : " + product.votes;
+
+    const actors = document.createElement('p');
+    actors.textContent = "Actors : " + product.actors;
+    
+    const writers = document.createElement('p');
+    writers.textContent = "Writers : " + product.writers;
+    
+    const genres = document.createElement('p');
+    genres.textContent = "Genres : " + product.genres;
+    
+    container_data.appendChild(title);
+    container_data.appendChild(bouton);
+    container_data.appendChild(directors);
+    container_data.appendChild(year);
+    container_data.appendChild(score);
+    container_data.appendChild(votes);
+    container_data.appendChild(actors);
+    container_data.appendChild(writers);
+    container_data.appendChild(genres);
 }
 
 function createCarouselItems(products, theme) {

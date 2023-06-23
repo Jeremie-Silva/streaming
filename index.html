@@ -7,21 +7,25 @@
     <link rel="icon" href="https://user.oc-static.com/upload/2020/09/18/16004298163529_P5.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/about">Catégories</a></li>
+    <header id="top">
+        <nav class="navbar">
+            <img src="https://user.oc-static.com/upload/2020/09/18/16004298163529_P5.png" alt="Just Stream It">
+            <ul class="nav no-search">
+              <li class="nav-item"><a href="#top">Home</a></li>
+              <li class="nav-item"><a href="#heading-best-movies">Best movies</a></li>
+              <li class="nav-item"><a href="#heading-adventure">Adventure</a></li>
+              <li class="nav-item"><a href="#heading-animation">Animation</a></li>
+              <li class="nav-item"><a href="#heading-action">Action</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="flex-container">
-            <h1>Top Movie</h1>
-            <div id="best_movie"></div>
+            <div id="best_movie_data"></div>
+            <div id="best_movie_img"></div>
         </div>
-        <h2>Best movies</h2>
+        <h2 id="heading-best-movies">Best movies</h2>
         <div class="va-carrousel-section">
             <div class="va-whitewrap">
                 <div id="va_container_best_movies">
@@ -47,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <h2>Adventure</h2>
+        <h2 id="heading-adventure">Adventure</h2>
         <div class="va-carrousel-section">
             <div class="va-whitewrap">
                 <div id="va_container_adventure">
@@ -73,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <h2>Animation</h2>
+        <h2 id="heading-animation">Animation</h2>
         <div class="va-carrousel-section">
             <div class="va-whitewrap">
                 <div id="va_container_animation">
@@ -99,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <h2>Action</h2>
+        <h2 id="heading-action">Action</h2>
         <div class="va-carrousel-section">
             <div class="va-whitewrap">
                 <div id="va_container_action">

@@ -2,12 +2,13 @@ html{
     font-family: Roboto, Arial, Helvetica, sans-serif;
     padding:0;
     margin:0;
-    color:white;
+    color: white;
 }
 
 *{
     box-sizing: border-box;
     text-decoration: none;
+    color: white !important;
 }
 
 body{
@@ -205,17 +206,35 @@ h1, h2 {
     margin-bottom: 0px;
 }
 
-.best-movie {
-    margin 0 auto;
-    width: 300px;
+h1 {
+    margin-bottom : 35px;
 }
 
 .flex-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .flex-container * {
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 300px;
+}
+
+.navbar {
+    display: flex;
+    justify-content : space-between;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.navbar * {
+    display: inline-block;
+}
+
+.navbar ul * {
+    padding: 5px;
+    justify-content : space-evenly;
+}
+
+.navbar img {
+    width: 100px;
 }
