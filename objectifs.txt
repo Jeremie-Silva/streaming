@@ -1,4 +1,0 @@
-TDD
-Selenium
-Locust
-Typing

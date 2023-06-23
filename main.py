@@ -3,7 +3,6 @@ import json
 
 API_BASE_URL = "http://localhost:8000/api/v1/"
 
-
 def get_ressource(endpoint, base_url=API_BASE_URL, **filters):
     query_params = "?"
     for key, value in filters.items():
@@ -14,7 +13,6 @@ def get_ressource(endpoint, base_url=API_BASE_URL, **filters):
         response.raise_for_status()
         json_data = response.json()
     except:
-        # Catche les exceptions et tester la methode
         return "error"
     return json_data
 
@@ -29,10 +27,9 @@ def get_movie_list(category):
     endpoint = "titles/"
     ressources_1 = get_ressource(endpoint, genre=category, sort_by="-imdb_score")
     ressources_2 = get_ressource(endpoint, genre=category, sort_by="-imdb_score", page=2)
-    result = [ressources_1["results"][i] for i in range(1, 5)]
+    result = [ressources_1["results"][i] for i in range(0, 5)]
     result.append(ressources_2["results"][0])
     result.append(ressources_2["results"][1])
-    result.append(ressources_2["results"][2])
     return result
 
 

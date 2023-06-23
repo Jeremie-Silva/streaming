@@ -1,36 +1,221 @@
-.carousel-container {
-  display: flex;
-  align-items: center;
+html{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    padding:0;
+    margin:0;
+    color:white;
 }
 
-.carousel {
-  display: flex;
-  overflow: hidden;
-  width: 400px;
-  position: relative;
+*{
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-.carousel-item {
-  flex: 0 0 100px;
-  height: 100px;
-  background-color: lightgray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
+body{
+    background: #2f3237;    
 }
 
-.prev-button,
-.next-button {
-  margin: 0 10px;
+.div-center {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
-.prev-button {
-  position: absolute;
-  left: 0;
+#va_container {
+    position: relative;
+    max-width: 1140px;
+    margin: auto;
 }
 
-.next-button {
-  position: absolute;
-  right: 0;
+.va-thumbnail {
+    border-radius: 5px;
+    border: 0px;
+    max-width: 100%;
+}
+
+.va-title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.va-carrousel-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.va-carrousel-flexbox .va-card {
+    flex: 0 0 auto;
+    padding-left: 15px;
+}
+
+.va-carrousel-flexbox .va-card:last-child {
+    margin-right: 15px;
+}
+
+.va-carrousel-flexbox .va-card:last-child::after {
+    content: ' ';
+    display: inline-block;
+}
+
+.va-card {
+    width: 100px;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+}
+
+.va-card:hover {
+    user-select: none;
+    outline: none;
+}
+
+.va-card a {
+    display: block;
+}
+
+
+.va-carrousel, .va-carrousel-flexbox {
+    width: 100%;
+}
+
+.va-carrousel-title {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+}
+
+.va-carrousel::-webkit-scrollbar, .va-carrousel-flexbox::-webkit-scrollbar {
+    display: none;
+}
+
+.va-title {
+    margin-top: 8px;
+    font-size: 11px;
+    max-height: 3em;
+    overflow: hidden;
+    color: white;
+    font-weight: 700;
+}
+
+.va-start-from {
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.va-points {
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    color: white;
+}
+
+.deals-paddle {
+    height: 38px;
+    width: 38px;
+    color: white;
+    background-color: #00000089;
+    border-radius: 50%;
+    border: 0px solid;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+.deals-paddle:focus {
+    outline: none;
+}
+
+.deals-paddle:active {
+    border-style: solid;
+    outline: none;
+    user-select: none;
+}
+
+.deals-paddle svg {
+    width: 10px;
+}
+
+
+.deals-scroll-left {
+    top: 0;
+    left: 5px;
+    bottom: 0;
+}
+
+.deals-scroll-right {
+    top: 0;
+    bottom: 0;
+    right: 5px;
+}
+
+.va-carrousel-section {
+    padding: 0px;
+    position: relative;
+}
+
+
+.va-whitewrap {
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.va-seeall {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    border-top: 1px solid #DDDDDD;
+    text-align: center;
+    padding: 10px;
+}
+
+.va-carrousel-section {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.other-game-button {
+    width: 300px;
+}
+
+.va-title {
+    font-size: 13px;
+}
+
+.va-card {
+    width: 187px;
+}
+
+.va-card img {
+    width: 100%;
+}
+
+h1, h2 {
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.best-movie {
+    margin 0 auto;
+    width: 300px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container * {
+    margin-left: 10%;
+    margin-right: 10%;
 }
