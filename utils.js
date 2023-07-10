@@ -1,4 +1,3 @@
-
 //Carrousel utils
 
 var isAnimating = false;
@@ -142,20 +141,57 @@ function createCarouselItems(products, theme) {
     const container = document.getElementById("va-carrousel-flexbox-" + theme);
 
     for (let product of products) {
+//        const cardDiv = document.createElement('div');
+//        const link = document.createElement('a');
+//        const img = document.createElement('img');
+//
+//        cardDiv.classList.add('va-card');
+//        link.classList.add('link-plain');
+//        img.classList.add('va-thumbnail');
+//        img.src = product.image_url;
+//        img.alt = product.title;
+//
+//        link.appendChild(img);
+//        cardDiv.appendChild(link);
+//        container.appendChild(cardDiv);
         const cardDiv = document.createElement('div');
-        const link = document.createElement('a');
         const img = document.createElement('img');
 
         cardDiv.classList.add('va-card');
-        link.classList.add('link-plain');
         img.classList.add('va-thumbnail');
         img.src = product.image_url;
         img.alt = product.title;
 
-        link.appendChild(img);
-        cardDiv.appendChild(link);
+        img.addEventListener('click', () => openModal(product));
+
+        cardDiv.appendChild(img);
         container.appendChild(cardDiv);
     }
+}
+
+function openModal(product) {
+    const showDialog = document.getElementById('show-dialog');
+    const dialog = document.getElementById('dialog');
+    const hideDialog = document.getElementById('close-dialog');
+    const modale = document.getElementById('modale');
+
+    showDialog.addEventListener('click', () => {
+    	dialog.showModal();
+    });
+//    alert("dfefef")
+    
+    const title = document.createElement('h1');
+    modale.appendChild(title);
+
+    hideDialog.addEventListener('click', () => {
+    	dialog.close();
+    });
+
+    dialog.addEventListener('click', ( e ) => {
+    	if ( e.target.tagName === 'DIALOG' ) {
+    		dialog.close();
+    	}
+    });
 }
 
 // main script

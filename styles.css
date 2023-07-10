@@ -238,3 +238,26 @@ h1 {
 .navbar img {
     width: 100px;
 }
+
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(2px);
+}
+
+dialog {
+	width: 100%;
+	max-width: 1160px;
+	border: 0;
+	padding: 0;
+}
+
+#dialog-wrap {
+	padding: 35px;
+}
+
+#close-dialog, #close-generated-dialog {
+	display:none;
+}
+.modale * {
+    color: black !important;
+}
