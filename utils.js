@@ -141,19 +141,6 @@ function createCarouselItems(products, theme) {
     const container = document.getElementById("va-carrousel-flexbox-" + theme);
 
     for (let product of products) {
-//        const cardDiv = document.createElement('div');
-//        const link = document.createElement('a');
-//        const img = document.createElement('img');
-//
-//        cardDiv.classList.add('va-card');
-//        link.classList.add('link-plain');
-//        img.classList.add('va-thumbnail');
-//        img.src = product.image_url;
-//        img.alt = product.title;
-//
-//        link.appendChild(img);
-//        cardDiv.appendChild(link);
-//        container.appendChild(cardDiv);
         const cardDiv = document.createElement('div');
         const img = document.createElement('img');
 
@@ -170,29 +157,49 @@ function createCarouselItems(products, theme) {
 }
 
 function openModal(product) {
-    const showDialog = document.getElementById('show-dialog');
     const dialog = document.getElementById('dialog');
-    const hideDialog = document.getElementById('close-dialog');
     const modale = document.getElementById('modale');
-
-    showDialog.addEventListener('click', () => {
-    	dialog.showModal();
-    });
-//    alert("dfefef")
     
-    const title = document.createElement('h1');
-    modale.appendChild(title);
+    const title = document.getElementById("modal-title");
+    title.textContent = product.title;
+    
+    const directors = document.getElementById("modal-directors");
+    directors.textContent = "Directors : " + product.directors;
+    
+    const year = document.getElementById("modal-year");
+    year.textContent = "Year : " + product.year;
 
+    const imdb_score = document.getElementById("modal-imdb_score");
+    imdb_score.textContent = "Score : " + product.imdb_score;
+
+    const votes = document.getElementById('modal-votes');
+    votes.textContent = "Votes : " + product.votes;
+
+    const actors = document.getElementById('modal-actors');
+    actors.textContent = "Actors : " + product.actors;
+
+    const writers = document.getElementById('modal-writers');
+    writers.textContent = "Writers : " + product.writers;
+
+    const genres = document.getElementById('modal-genres');
+    genres.textContent = "Genres : " + product.genres;
+    
+    // Répétez pour les autres détails du produit...
+
+    dialog.showModal();
+
+    const hideDialog = document.getElementById('close-dialog');
     hideDialog.addEventListener('click', () => {
-    	dialog.close();
+        dialog.close();
     });
 
     dialog.addEventListener('click', ( e ) => {
-    	if ( e.target.tagName === 'DIALOG' ) {
-    		dialog.close();
-    	}
+        if ( e.target.tagName === 'DIALOG' ) {
+            dialog.close();
+        }
     });
 }
+
 
 // main script
 

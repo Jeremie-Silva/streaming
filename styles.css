@@ -255,9 +255,10 @@ dialog {
 	padding: 35px;
 }
 
-#close-dialog, #close-generated-dialog {
+#close-dialog, #close-generated-dialog, #show-dialog {
 	display:none;
 }
-.modale * {
+
+#modale * {
     color: black !important;
 }
