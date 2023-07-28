@@ -14,8 +14,9 @@ git clone git@github.com:Jeremie-Silva/streaming.git
 <br/>
 
 ### Lancer l'application
-Modifier le port en fonction de votre configuration
 ```bash
-localhost:63342/streaming/
+cd streaming/
+google-chrome index.html
 ```
+Remplacer `google-chrome` par le nom de votre navigateur
 <br/>
