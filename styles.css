@@ -34,8 +34,11 @@ body{
 }
 
 .va-title {
-    margin-top: 0px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    font-size: 13px;
+    max-height: 3em;
+    overflow: hidden;
+    color: white;
     font-weight: 700;
 }
 
@@ -76,7 +79,6 @@ body{
     display: block;
 }
 
-
 .va-carrousel, .va-carrousel-flexbox {
     width: 100%;
 }
@@ -91,15 +93,6 @@ body{
 
 .va-carrousel::-webkit-scrollbar, .va-carrousel-flexbox::-webkit-scrollbar {
     display: none;
-}
-
-.va-title {
-    margin-top: 8px;
-    font-size: 11px;
-    max-height: 3em;
-    overflow: hidden;
-    color: white;
-    font-weight: 700;
 }
 
 .va-start-from {
@@ -159,12 +152,6 @@ body{
     right: 5px;
 }
 
-.va-carrousel-section {
-    padding: 0px;
-    position: relative;
-}
-
-
 .va-whitewrap {
     padding-top: 15px;
     margin-top: 15px;
@@ -182,14 +169,12 @@ body{
 .va-carrousel-section {
     padding-left: 15px;
     padding-right: 15px;
+    padding: 0px;
+    position: relative;
 }
 
 .other-game-button {
     width: 300px;
-}
-
-.va-title {
-    font-size: 13px;
 }
 
 .va-card {
@@ -255,10 +240,21 @@ dialog {
 	padding: 35px;
 }
 
-#close-dialog, #close-generated-dialog, #show-dialog {
+#close-generated-dialog {
 	display:none;
 }
 
 #modale * {
     color: black !important;
+}
+
+#best_movie_button {
+    font-size: 16px;
+    background-color: green;
+    padding: 15px;
+}
+
+#best_movie_data {
+    display: flex;
+    align-items: center;
 }

@@ -10,19 +10,21 @@
     <header id="top">
         <nav class="navbar">
             <img src="https://user.oc-static.com/upload/2020/09/18/16004298163529_P5.png" alt="Just Stream It">
-            <ul class="nav no-search">
-              <li class="nav-item"><a href="#top">Home</a></li>
-              <li class="nav-item"><a href="#heading-best-movies">Best movies</a></li>
-              <li class="nav-item"><a href="#heading-adventure">Adventure</a></li>
-              <li class="nav-item"><a href="#heading-animation">Animation</a></li>
-              <li class="nav-item"><a href="#heading-action">Action</a></li>
+            <ul class="nav">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#heading-best-movies">Best movies</a></li>
+              <li><a href="#heading-adventure">Adventure</a></li>
+              <li><a href="#heading-animation">Animation</a></li>
+              <li><a href="#heading-action">Action</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="flex-container">
-            <div id="best_movie_data"></div>
+            <div id="best_movie_data">
+                <button id="best_movie_button">Informations du film</button>
+            </div>
             <div id="best_movie_img"></div>
         </div>
         <h2 id="heading-best-movies">Best movies</h2>
@@ -129,11 +131,12 @@
                 </div>
             </div>
         </div>
-        <button id="show-dialog"></button>
         <dialog id="dialog">
             <div id="dialog-wrap">
                 <div id="modale">
                     <h2 id="modal-title"></h2>
+                    <br>
+                    <img id="modal-img" src="" alt="">
                     <p id="modal-directors"></p>
                     <p id="modal-year"></p>
                     <p id="modal-imdb_score"></p>
@@ -141,8 +144,8 @@
                     <p id="modal-actors"></p>
                     <p id="modal-writers"></p>
                     <p id="modal-genres"></p>
+                    <button id="close-dialog">Fermer</button>
                 </div>
-                <button id="close-dialog">Close Dialog</button>
             </div>
         </dialog>
     </main>
